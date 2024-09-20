@@ -1,5 +1,8 @@
-const express = require('express')
+import configRoutes from './routes/configurations'
+import express from 'express';
 const app = express()
+
+app.use(configRoutes)
 
 app.get('/api', (req, res) => {
     res.json({ "users": ["userOne", "userTwo", "userThree"] })
